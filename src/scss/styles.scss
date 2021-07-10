@@ -1,5 +1,11 @@
-$header-color: rgba(49, 71, 88, 0.9);
+$header-color: rgba(49, 71, 88, .7);
 
-body{
-  background-color: $header-color;
-}
+.nav-menu{
+display: flex;
+flex-direction: column;
+  a{
+    text-decoration: none;
+    color:black;
+
+  }
+};
