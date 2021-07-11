@@ -1,0 +1,192 @@
+body {
+  font-size: 0.8em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: auto;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(49, 71, 88, 0.7);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .search {
+  margin-right: 2em;
+}
+
+.main-header .user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+}
+
+.main-header .user-info .user-info__name {
+  border-radius: 0.4em;
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+  padding: .5em;
+}
+
+.search-form__button {
+  margin: 0;
+  color: white;
+  background-color: black;
+  border: 1px solid rgba(243, 170, 60, 0.6);
+}
+
+.search-form__button:active {
+  color: #d84242;
+  background-color: #6053aa;
+  border: 3px solid rgba(124, 96, 54, 0.6);
+}
+
+.body {
+  display: flex;
+}
+
+.body .body-nav-menu {
+  background-color: rgba(49, 71, 88, 0.5);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.body .body-nav-menu .nav-menu__item {
+  border-radius: 2em;
+  background-color: #c3dbaf;
+  margin: .5em;
+  text-align: center;
+  height: 1.6em;
+  text-decoration: none;
+  color: black;
+}
+
+.body .body-nav-menu .nav-menu__item:active {
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+}
+
+.body .body-main {
+  background-color: salmon;
+  flex-grow: 4;
+}
+
+.body .body-main .body-main-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 30em;
+}
+
+.body .body-main .body-main-section .body-main-section-article {
+  background-color: #2696ca;
+  margin: 2em;
+  flex-grow: 1;
+  border-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.body .body-main .body-main-section .body-main-section-article .body-main-section-article__text {
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+  width: 70%;
+  border-radius: 0.5em;
+}
+
+.body .body-main .second-section {
+  background-color: #8ae67e;
+  display: flex;
+  flex-direction: column;
+}
+
+.body .body-main .second-section .second-section-article,
+.body .body-main .second-section .container {
+  background-color: #2696ca;
+  border-radius: 2em;
+  margin: 2em;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.body .body-main .second-section .second-section-article .second-section-article__item,
+.body .body-main .second-section .container .second-section-article__item {
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+  align-content: center;
+  margin: 0.5;
+  padding: 5em;
+  border-radius: 1em;
+}
+
+.body .body-main .second-section .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #8ae67e;
+}
+
+.body .body-main .second-section .container .container-aricle {
+  border: 3px dashed black;
+  width: 25%;
+  height: 10em;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2em;
+  background-color: rgba(49, 71, 88, 0.7);
+}
+
+.body .body-main .second-section .container .container-aricle .container-article__item {
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+  margin: 1.5em;
+  border-radius: 0.5em;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.body .body-main .second-section .container .container-aricle .container-article__item:hover {
+  background: linear-gradient(to top left, powderblue, pink);
+}
+
+.body .body-main .second-section .container .container-aricle .__item1 {
+  align-self: flex-start;
+  flex-grow: 1;
+}
+
+.body .body-main .second-section .container .container-aricle .__item2 {
+  align-self: center;
+  flex-grow: 1;
+}
+
+.body .body-main .second-section .container .container-aricle .__item3 {
+  align-self: flex-end;
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: rgba(49, 71, 88, 0.7);
+  height: 5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer .footer__text {
+  background-color: rgba(231, 212, 184, 0.6);
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: auto, auto, auto, 1em;
+  position: relative;
+  top: 1em;
+  left: 3em;
+}
+
+.footer .footer__text:hover {
+  background: linear-gradient(to top left, powderblue, pink);
+}

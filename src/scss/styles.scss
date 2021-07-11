@@ -1,5 +1,198 @@
-$header-color: rgba(49, 71, 88, 0.9);
+$header-color: rgba(49, 71, 88, .7);
+$nav-bar-color: rgba(49, 71, 88, .5);
+$article-color: rgb(38, 150, 202);
+$elem-color: linear-gradient(45deg, #EECFBA, #C5DDE8);
+$font-size:.8em;
+
+@mixin flex-mix ($direction){
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin border-radius($radius) {
+  border-radius:$radius;
+}
 
 body{
+  font-size: $font-size;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: auto;
+}
+
+.main-header{
+  @include flex-mix(row);
   background-color: $header-color;
+  justify-content: space-between;
+  align-items: center;
+
+  .search{
+    margin-right: 2em;
+  }
+  .user-info{
+    @include flex-mix(row);
+    align-items: center;
+    width: 30%;
+    
+    .user-info__name{
+      @include border-radius(.4em);
+      background: $elem-color;
+      padding: .5em;
+      
+    }
+  }
+}
+ .search-form__button{
+   margin: 0;
+   color: white;
+   background-color: black;
+   border: 1px solid rgba(243, 170, 60, 0.6);
+ 
+  &:active{
+    color: rgb(216, 66, 66);
+   background-color: rgb(96, 83, 170);
+   border: 3px solid rgba(124, 96, 54, 0.6);
+
+  }
+  }
+
+
+
+
+.body{
+
+display: flex;
+
+  .body-nav-menu{
+    background-color: $nav-bar-color;
+    flex-grow: 1;
+    @include flex-mix(column);
+
+      .nav-menu__item{
+        @include border-radius(2em);
+        background-color: rgb(195, 219, 175);
+        margin: .5em;
+        text-align: center;
+        height: $font-size*2;
+        text-decoration: none;
+        color:black;
+
+        &:active{
+          background: $elem-color;
+        }
+      }
+  }
+
+  .body-main{
+    background-color: salmon;
+    flex-grow: 4;
+
+    .body-main-section{
+      @include flex-mix(row);
+      justify-content: space-around;
+      height: 30em;
+
+      .body-main-section-article{
+        background-color: $article-color;
+        margin: 2em;
+        flex-grow: 1;
+        @include border-radius(3em);
+        @include flex-mix(column);
+        justify-content: space-around;
+
+      .body-main-section-article__text{
+        background:$elem-color;
+        margin: auto;
+        padding: 1em;
+        text-align: center;
+        width: 70%;
+        @include border-radius(0.5em)
+      }
+      }
+    }
+    .second-section{
+      background-color: rgb(138, 230, 126);
+      @include flex-mix(column);
+      
+      .second-section-article, .container{
+        background-color: $article-color;
+        @include border-radius(2em);
+        margin:2em;
+        flex-grow: 1;
+        @include flex-mix(row);
+        justify-content: space-around;
+        align-items: center;
+        
+        .second-section-article__item{
+          background: $elem-color;
+          align-content: center;
+          margin: 0.5;
+          padding: 5em;
+          @include border-radius(1em);
+
+          
+        }
+      }
+    .container{
+      @include flex-mix(row);
+      justify-content: space-between;
+      background-color: rgb(138, 230, 126);
+    
+      .container-aricle{
+        border: 3px dashed black;
+        width: 25%;
+        height: 10em;
+        @include flex-mix(row);
+        @include border-radius(2em);
+        background-color: $header-color; 
+        
+        .container-article__item{
+          background: $elem-color;
+          margin: 1.5em;
+          @include border-radius(.5em);
+          text-align: center;
+          padding: 0.5em;
+
+            &:hover{
+              background:linear-gradient(to top left, powderblue, pink);
+            }
+        }
+        .__item1{
+          align-self: flex-start;
+          flex-grow: 1;
+        }
+        .__item2{
+          align-self: center;
+          flex-grow: 1;
+        }
+        .__item3{
+          align-self: flex-end;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
+}
+
+
+
+
+.footer{
+  background-color: $header-color;
+  height: 5em;
+  @include flex-mix(row);
+  align-items: center;
+
+  
+  .footer__text{
+    background-color: rgba(231, 212, 184, .6);
+    @include border-radius(.5em);
+    padding: 1em;
+    margin: auto, auto, auto, 1em;
+    position: relative;
+    top: 1em; left: 3em;//Просто поигрался))
+    &:hover{
+      background:linear-gradient(to top left, powderblue, pink);
+    }
+  }
 }
