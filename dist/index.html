@@ -8,8 +8,10 @@
 <body>
 <header class="main-header">
 <div class="user-info">
-    <img class ="user-info__img"src="scss/img/user-img.png" alt="picture here">
-    <p class="user-name">User</p>
+    <svg class ="user-info__place-for-image"height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke=blue stroke-width="3" fill="yellow" />
+     </svg>
+    <p class="user-info__name">User</p>
 
 </div>
 <div class="search">
@@ -19,15 +21,50 @@
     </form>
 </div>
 </header>
-<nav class="nav-menu">
+<div class="body">
+<nav class="body-nav-menu">
     <a href="index.html" class="nav-menu__item">Home</a>
     <a href="" class="nav-menu__item">News</a>
     <a href="" class="nav-menu__item">Top 10</a>
     <a href="" class="nav-menu__item">Contact us</a>
     <a href="" class="nav-menu__item">About us</a>
 </nav>
-<main></main>
-<footer></footer>
-    <!-- Place for code -->
+<main class="body-main">
+    <section class="body-main-section">
+        <article class="body-main-section-article ">
+            <p class="body-main-section-article__text">Text</p>
+        </article>
+        <article class="body-main-section-article">
+            <p class="body-main-section-article__text">Text</p>
+            <p class="body-main-section-article__text">Text</p>
+        </article>
+    </section> 
+    <section class="body-main-section second-section">
+        <article class ="second-section-article">
+            <p class="second-section-article__item">Text</p>
+            <p class="second-section-article__item">Text</p>
+        </article>
+        
+        <div class="second-section-container container">
+            <article class="container-aricle">
+                <p class="container-article__item __item1">Text</p>
+            </article>
+            <article class="container-aricle">
+                <p class="container-article__item __item2">Text</p>
+            </article>
+            <article class="container-aricle">
+                <p class="container-article__item __item3">Text</p>
+            </article>
+        </div>
+    </section>
+         
+
+
+</main>
+</div>
+<footer class="footer">
+<small class="footer__text">&#169 2021</small>
+</footer>
+    
 </body>
 </html>
